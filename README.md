@@ -32,98 +32,87 @@ This repository contains a Node.js and MongoDB-based backend for a notes applica
 
    ```bash
    git clone https://github.com/divyanshu2003singh/Divyanshu_notes_assignment.git
-Install dependencies:
 
-bash
-Copy code
-cd notes-app
-npm install
-Set up MongoDB:
+My apologies, the previous version wasn't quite GitHub-flavored markdown specific. Here's a revision:
 
-Create a MongoDB Atlas cluster and obtain the connection URI.
-Create a .env file:
+## Installation
 
-In the root directory, create a .env file and add:
+1. **Install dependencies:**
 
-env
-Copy code
-PORT=4000
-MONGODB_URI=your-mongodb-uri
-Start the server:
+    ```bash
+    cd notes-app
+    npm install
+    ```
 
-bash
-Copy code
-npm start
-Usage
-Authentication
-Signup: POST /api/auth/signup
+2. **Set up MongoDB:**
 
-Create a new user by providing a unique username and password in the request body.
-Login: POST /api/auth/login
+    * Create a MongoDB Atlas cluster and obtain the connection URI.
 
-Authenticate an existing user by providing the username and password in the request body.
-Notes
-Get All Notes: GET /api/notes
+3. **Create a `.env` file:**
 
-Retrieve all notes for the authenticated user.
-Get Note by ID: GET /api/notes/:id
+    * In the root directory, create a `.env` file and add:
 
-Retrieve a specific note by its ID.
-Create Note: POST /api/notes
+      ```
+      PORT=4000
+      MONGODB_URI=your-mongodb-uri
+      ```
 
-Create a new note by providing a title and content in the request body.
-Update Note: PUT /api/notes/:id
+4. **Start the server:**
 
-Update an existing note by providing a new title and content in the request body.
-Delete Note: DELETE /api/notes/:id
+    ```bash
+    npm start
+    ```
 
-Delete a specific note by its ID.
-Share Note: POST /api/notes/:id/share
+## Usage
 
-Share a note with another user by providing their user ID in the request body.
-Search Notes: GET /api/notes/search?q=query
+### Authentication
 
-Search for notes based on a query string in the title or content.
-Testing
-Postman
-Open Postman:
+* **Signup:** `POST /api/auth/signup`
+    * Create a new user by providing a unique username and password in the request body.
+* **Login:** `POST /api/auth/login`
+    * Authenticate an existing user by providing the username and password in the request body.
 
-Download and open Postman.
-Import Postman Collection:
+### Notes
 
-Import the provided Postman collection file (notes-app.postman_collection.json).
-Set up environment variables, including baseURL and authToken.
-Run the Tests:
+* **Get All Notes:** `GET /api/notes`
+    * Retrieve all notes for the authenticated user.
+* **Get Note by ID:** `GET /api/notes/:id`
+    * Retrieve a specific note by its ID.
+* **Create Note:** `POST /api/notes`
+    * Create a new note by providing a title and content in the request body.
+* **Update Note:** `PUT /api/notes/:id`
+    * Update an existing note by providing a new title and content in the request body.
+* **Delete Note:** `DELETE /api/notes/:id`
+    * Delete a specific note by its ID.
+* **Share Note:** `POST /api/notes/:id/share`
+    * Share a note with another user by providing their user ID in the request body.
+* **Search Notes:** `GET /api/notes/search?q=query`
+    * Search for notes based on a query string in the title or content.
 
-Open the collection in Postman.
-Run the collection, ensuring that the environment is selected.
-Review Results:
+## Testing
 
-Check responses, status codes, and error messages for each request.
-Unit Tests
-Run unit tests using Mocha and Chai:
+### Postman
 
-bash
-Copy code
+1. Download and open Postman.
+2. Import the provided Postman collection file (`notes-app.postman_collection.json`).
+3. Set up environment variables, including `baseURL` and `authToken`.
+4. Run the collection, ensuring the environment is selected.
+5. Review responses, status codes, and error messages for each request.
+
+### Unit Tests
+
+```bash
 npm test
-Contributing
+```
+
+## Contributing
+
 Feel free to contribute by submitting issues or pull requests.
 
-License
+## License
+
 This project is licensed under the MIT License.
 
 
+This should be a more faithful representation of GitHub-flavored markdown!
 
-
-
-
-
-
-
-
-
-bash
-Copy code
-npm test
-Contributing
-Feel free to contribute by submitting issues or pull requests.
