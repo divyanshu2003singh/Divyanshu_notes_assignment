@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha --require @babel/register --loader @babel/register -r esm"
+   "scripts": {
+    "test": "mocha /Users/shubham/Desktop/DIVYANSHU_notes_backend_assignment/test/notes.test.mjs"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,7 +24,9 @@
     "@babel/preset-env": "^7.23.7",
     "@babel/register": "^7.23.7",
     "chai": "^5.0.0",
+    "chai-http": "^4.4.0",
     "esm": "^3.2.25",
     "mocha": "^10.2.0"
   }
 }
+
