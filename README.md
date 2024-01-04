@@ -40,7 +40,8 @@ My apologies, the previous version wasn't quite GitHub-flavored markdown specifi
 1. **Install dependencies:**
 
     ```bash
-    cd notes-app
+    cd Divyanshu_notes_assignment
+
     npm install
     ```
 
@@ -60,7 +61,7 @@ My apologies, the previous version wasn't quite GitHub-flavored markdown specifi
 4. **Start the server:**
 
     ```bash
-    npm start
+    node server.mjs
     ```
 
 ## Usage
