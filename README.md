@@ -93,17 +93,103 @@ My apologies, the previous version wasn't quite GitHub-flavored markdown specifi
 
 ### Postman
 
-1. Download and open Postman.
-2. Import the provided Postman collection file (`notes-app.postman_collection.json`).
-3. Set up environment variables, including `baseURL` and `authToken`.
-4. Run the collection, ensuring the environment is selected.
-5. Review responses, status codes, and error messages for each request.
+ **## Endpoints**
 
-### Unit Tests
+**### Authentication**
 
-```bash
-npm test
-```
+* **Signup:**
+    * **Request Type:** POST
+    * **URL:** http://localhost:4000/api/auth/signup
+    * **Body (JSON):**
+      ```json
+      { "username": "your_username", "password": "your_password" } 
+      ```
+      Replace `your_username` and `your_password` with your desired credentials.
+
+* **Login:**
+    * **Request Type:** POST
+    * **URL:** http://localhost:4000/api/auth/login
+    * **Body (JSON):**
+      ```json
+      { "username": "your_username", "password": "your_password" } 
+      ```
+      Replace `your_username` and `your_password` with your actual credentials.
+
+**### Notes**
+
+* **Get All Notes:**
+    * **Request Type:** GET
+    * **URL:** http://localhost:4000/api/notes
+    * **Headers:**
+      ```
+      Authorization: Bearer <authToken>
+      ```
+      Replace `<authToken>` with the token obtained after successful login.
+
+* **Get Note by ID:**
+    * **Request Type:** GET
+    * **URL:** http://localhost:4000/api/notes/<note_id>
+      Replace `<note_id>` with the actual ID of the note.
+
+* **Create Note:**
+    * **Request Type:** POST
+    * **URL:** http://localhost:4000/api/notes
+    * **Headers:**
+      ```
+      Authorization: Bearer <authToken>
+      ```
+      Replace `<authToken>` with the token obtained after successful login.
+    * **Body (JSON):**
+      ```json
+      { "title": "Note Title", "content": "Note Content" } 
+      ```
+      Replace `"Note Title"` and `"Note Content"` with your desired content.
+
+* **Update Note:**
+    * **Request Type:** PUT
+    * **URL:** http://localhost:4000/api/notes/<note_id>
+      Replace `<note_id>` with the actual ID of the note.
+    * **Headers:**
+      ```
+      Authorization: Bearer <authToken>
+      ```
+      Replace `<authToken>` with the token obtained after successful login.
+    * **Body (JSON):**
+      ```json
+      { "title": "Updated Note Title", "content": "Updated Note Content" } 
+      ```
+      Replace `"Updated Note Title"` and `"Updated Note Content"` with your desired updates.
+
+* **Delete Note:**
+    * **Request Type:** DELETE
+    * **URL:** http://localhost:4000/api/notes/<note_id>
+      Replace `<note_id>` with the actual ID of the note.
+    * **Headers:**
+      ```
+      Authorization: Bearer <authToken>
+      ```
+      Replace `<authToken>` with the token obtained after successful login.
+
+* **Share Note:**
+    * **Request Type:** POST
+    * **URL:** http://localhost:4000/api/notes/<note_id>/share
+      Replace `<note_id>` with the actual ID of the note.
+    * **Headers:**
+      ```
+      Authorization: Bearer <authToken>
+      ```
+      Replace `<authToken>` with the token obtained after successful login.
+    * **Body (JSON):**
+      ```json
+      { "sharedUserId": "user_id_to_share_with" } 
+      ```
+      Replace `"user_id_to_share_with"` with the ID of the user you want to share the note with.
+
+* **Search Notes:**
+    * **Request Type:** GET
+    * **URL:** http://localhost:4000/api/notes/search?q=query
+      Replace `search_query` with the desired query string.
+
 
 ## Contributing
 
