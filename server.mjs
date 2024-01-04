@@ -21,7 +21,7 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://divyanshu:divyanshu@cluster0.57fvbtj.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('error', (error) => console.error('MongoDB connection error:', error));
 
 // Routes
