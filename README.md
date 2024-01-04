@@ -31,7 +31,7 @@ This repository contains a Node.js and MongoDB-based backend for a notes applica
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/notes-app.git
+   git clone https://github.com/divyanshu2003singh/Divyanshu_notes_assignment.git
 Install dependencies:
 
 bash
